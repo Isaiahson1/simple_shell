@@ -8,11 +8,11 @@
  */
 void free_data(data_shell *datash)
 {
-	unsigned int i;
+	unsigned int n;
 
-	for (i = 0; datash->_environ[i]; i++)
+	for (n = 0; datash->_environ[n]; n++)
 	{
-		free(datash->_environ[i]);
+		free(datash->_environ[n]);
 	}
 
 	free(datash->_environ);
