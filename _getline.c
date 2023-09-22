@@ -31,7 +31,7 @@ char *_getline()
 		{
 			free(buff);
 			return (0);
-	
+
 		}
 
 		if (i >= buffsize)
@@ -45,7 +45,6 @@ char *_getline()
 	}
 	buff[i] = '\0';
 	hashtag_handler(buff);
-
 	return (buff);
 }
 

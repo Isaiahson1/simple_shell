@@ -30,9 +30,17 @@ typedef struct bulltin
 #include <signal.h>
 #include <linux/limits.h>
 
+/* for read/write buffers */
+#define READ_BUF_SIZE 1024
+#define WRITE_BUF_SIZE 1024
+#define BUF_FLUSH -1
+
 /*## environ var ##*/
 
 extern char **environ;
+
+/* main.c */
+int main(int ac, char **av);
 
 /*shell.c*/
 int check_builtin(char **cmd);
@@ -75,8 +83,8 @@ void array_rev(char *arr, int len);
 int intlen(int num);
 int _strcmp(char *s1,char *s2);
 
-/*Custom error*/
-void _prerror(char **argv, int c, char **cmd);
+/*Custom_error*/
+void _prerror(char **argc, int c, char **cmd);
 
 /*Path.c*/
 int path_cmd(char **cmd);
@@ -108,4 +116,3 @@ void read_command(char *command, size_t size);
 
 
 #endif /*SHELL_H*/
-

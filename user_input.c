@@ -6,15 +6,15 @@
  * @size: size of the input
  * Return: Nothing
  */
- void read_command(char *command, size_t size)
+void read_command(char *command, size_t size)
 {
-	if (fgets(command, size,stdin) == NULL)
+	if (fgets(command, size, stdin) == NULL)
 	{
 		if (feof(stdin))
 		{
 			PRINTER("\n");
 			exit(EXIT_SUCCESS);
-		} 
+		}
 		else
 		{
 			PRINTER("Error while reading input.\n");
