@@ -2,10 +2,10 @@
 
 /**
  * now_print - prints to the STDOUT
- * @message: whats to be printed
+ * @str: whats to be printed
  */
 
-void now_print(const char *message)
+void now_print(const char *str)
 {
-	write(STDOUT_FILENO, message, strlen(message));
+	write(STDOUT_FILENO, str, strlen(str));
 }

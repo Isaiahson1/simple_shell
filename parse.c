@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * parse_cmd - Parse line of Input
+ * parse_cmd - Parse line of Input. Checks for special chars.
  * @input: User Input to Parse
  * Return: Array of char (Parsed)
  */
